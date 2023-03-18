@@ -41,6 +41,7 @@ namespace calculator
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             panel3 = new Panel();
+            label2 = new Label();
             button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -105,7 +106,7 @@ namespace calculator
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(36, 45);
+            panel1.Location = new Point(36, 31);
             panel1.Name = "panel1";
             panel1.Size = new Size(225, 146);
             panel1.TabIndex = 5;
@@ -117,14 +118,14 @@ namespace calculator
             panel2.Controls.Add(textBox3);
             panel2.Controls.Add(textBox2);
             panel2.Controls.Add(textBox1);
-            panel2.Location = new Point(36, 197);
+            panel2.Location = new Point(36, 183);
             panel2.Name = "panel2";
             panel2.Size = new Size(225, 262);
             panel2.TabIndex = 6;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(135, 143);
+            textBox4.Location = new Point(138, 149);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(25, 25);
@@ -132,7 +133,7 @@ namespace calculator
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(66, 143);
+            textBox3.Location = new Point(69, 149);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(25, 25);
@@ -140,7 +141,7 @@ namespace calculator
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(135, 75);
+            textBox2.Location = new Point(138, 81);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(25, 25);
@@ -148,7 +149,7 @@ namespace calculator
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(66, 75);
+            textBox1.Location = new Point(69, 81);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(25, 25);
@@ -157,10 +158,20 @@ namespace calculator
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(47, 55, 64);
-            panel3.Location = new Point(292, 45);
+            panel3.Location = new Point(292, 31);
             panel3.Name = "panel3";
             panel3.Size = new Size(450, 414);
             panel3.TabIndex = 7;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(518, 487);
+            label2.Name = "label2";
+            label2.Size = new Size(254, 15);
+            label2.TabIndex = 8;
+            label2.Text = "Created by IApofeoz && 4igar && Vlados-Poltos\r\n";
             // 
             // Form1
             // 
@@ -168,6 +179,7 @@ namespace calculator
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 52, 64);
             ClientSize = new Size(784, 511);
+            Controls.Add(label2);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -194,5 +206,6 @@ namespace calculator
         private TextBox textBox2;
         private TextBox textBox1;
         private Panel panel3;
+        private Label label2;
     }
 }
