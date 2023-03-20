@@ -15,9 +15,10 @@ namespace calculator
             }
             else
             {
-                label3.Text = textBox1.Text + "*" + textBox3.Text + "-" + textBox2.Text + "*" + textBox4.Text + "\r\n";
+                label3.Text = textBox1.Text + "*" + textBox3.Text + "-" + textBox2.Text + "*" + textBox4.Text + "\r\n" + "Ответ: " +
+                Convert.ToString(Convert.ToInt16(textBox1.Text) * Convert.ToInt16(textBox3.Text) - Convert.ToInt16(textBox2.Text) * Convert.ToInt16(textBox4.Text));
 
-                label3.Text = Convert.ToString(Convert.ToInt16(textBox1.Text) * Convert.ToInt16(textBox3.Text) - Convert.ToInt16(textBox2.Text) * Convert.ToInt16(textBox4.Text));
+
             }
 
         }
