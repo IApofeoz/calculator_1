@@ -41,10 +41,13 @@ namespace calculator
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             panel3 = new Panel();
+            label4 = new Label();
+            label3 = new Label();
             label2 = new Label();
             button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -106,7 +109,7 @@ namespace calculator
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(36, 31);
+            panel1.Location = new Point(36, 46);
             panel1.Name = "panel1";
             panel1.Size = new Size(225, 146);
             panel1.TabIndex = 5;
@@ -118,7 +121,7 @@ namespace calculator
             panel2.Controls.Add(textBox3);
             panel2.Controls.Add(textBox2);
             panel2.Controls.Add(textBox1);
-            panel2.Location = new Point(36, 183);
+            panel2.Location = new Point(36, 198);
             panel2.Name = "panel2";
             panel2.Size = new Size(225, 262);
             panel2.TabIndex = 6;
@@ -130,6 +133,7 @@ namespace calculator
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(25, 25);
             textBox4.TabIndex = 3;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // textBox3
             // 
@@ -138,6 +142,7 @@ namespace calculator
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(25, 25);
             textBox3.TabIndex = 2;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox2
             // 
@@ -146,6 +151,7 @@ namespace calculator
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(25, 25);
             textBox2.TabIndex = 1;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox1
             // 
@@ -154,14 +160,36 @@ namespace calculator
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(25, 25);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(47, 55, 64);
-            panel3.Location = new Point(292, 31);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(label3);
+            panel3.Location = new Point(292, 46);
             panel3.Name = "panel3";
             panel3.Size = new Size(450, 414);
             panel3.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(63, 14);
+            label4.Name = "label4";
+            label4.Size = new Size(321, 40);
+            label4.TabIndex = 1;
+            label4.Text = "Решение";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(14, 60);
+            label3.Name = "label3";
+            label3.Size = new Size(420, 339);
+            label3.TabIndex = 0;
+            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -188,6 +216,7 @@ namespace calculator
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -207,5 +236,7 @@ namespace calculator
         private TextBox textBox1;
         private Panel panel3;
         private Label label2;
+        private Label label3;
+        private Label label4;
     }
 }
