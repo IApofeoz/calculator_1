@@ -44,10 +44,14 @@ namespace calculator
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
             button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -117,6 +121,8 @@ namespace calculator
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(47, 55, 64);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(textBox4);
             panel2.Controls.Add(textBox3);
             panel2.Controls.Add(textBox2);
@@ -201,6 +207,24 @@ namespace calculator
             label2.TabIndex = 8;
             label2.Text = "Created by IApofeoz && 4igar && Vlados-Poltos\r\n";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.White;
+            pictureBox1.Location = new Point(190, 55);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(10, 138);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.Location = new Point(25, 55);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(10, 138);
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -217,6 +241,8 @@ namespace calculator
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -238,5 +264,7 @@ namespace calculator
         private Label label2;
         private Label label3;
         private Label label4;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
     }
 }
