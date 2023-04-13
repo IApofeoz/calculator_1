@@ -35,7 +35,7 @@ namespace calculator
             comboBox1 = new ComboBox();
             label1 = new Label();
             panel1 = new Panel();
-            panel2 = new Panel();
+            Order_2 = new Panel();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             textBox4 = new TextBox();
@@ -47,9 +47,9 @@ namespace calculator
             label3 = new Label();
             label2 = new Label();
             panel4 = new Panel();
+            label5 = new Label();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
-            textBox5 = new TextBox();
             button5 = new Button();
             button4 = new Button();
             button3 = new Button();
@@ -61,7 +61,7 @@ namespace calculator
             fileSystemWatcher5 = new FileSystemWatcher();
             button1 = new Button();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            Order_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -141,19 +141,19 @@ namespace calculator
             panel1.Size = new Size(225, 146);
             panel1.TabIndex = 5;
             // 
-            // panel2
+            // Order_2
             // 
-            panel2.BackColor = Color.FromArgb(47, 55, 64);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
-            panel2.Location = new Point(0, 152);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(225, 262);
-            panel2.TabIndex = 6;
+            Order_2.BackColor = Color.FromArgb(47, 55, 64);
+            Order_2.Controls.Add(pictureBox2);
+            Order_2.Controls.Add(pictureBox1);
+            Order_2.Controls.Add(textBox4);
+            Order_2.Controls.Add(textBox3);
+            Order_2.Controls.Add(textBox2);
+            Order_2.Controls.Add(textBox1);
+            Order_2.Location = new Point(0, 152);
+            Order_2.Name = "Order_2";
+            Order_2.Size = new Size(225, 262);
+            Order_2.TabIndex = 6;
             // 
             // pictureBox2
             // 
@@ -251,9 +251,9 @@ namespace calculator
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(47, 55, 64);
+            panel4.Controls.Add(label5);
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(pictureBox3);
-            panel4.Controls.Add(textBox5);
             panel4.Controls.Add(button5);
             panel4.Controls.Add(button4);
             panel4.Controls.Add(button3);
@@ -261,6 +261,17 @@ namespace calculator
             panel4.Name = "panel4";
             panel4.Size = new Size(706, 45);
             panel4.TabIndex = 9;
+            // 
+            // label5
+            // 
+            label5.BackColor = Color.White;
+            label5.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(25, 8);
+            label5.Name = "label5";
+            label5.Size = new Size(119, 30);
+            label5.TabIndex = 2;
+            label5.Text = "Способ решения";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox4
             // 
@@ -283,20 +294,6 @@ namespace calculator
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(25, 8);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.ReadOnly = true;
-            textBox5.RightToLeft = RightToLeft.No;
-            textBox5.ScrollBars = ScrollBars.Horizontal;
-            textBox5.Size = new Size(119, 30);
-            textBox5.TabIndex = 4;
-            textBox5.Text = "Способ решения";
-            textBox5.TextAlign = HorizontalAlignment.Center;
             // 
             // button5
             // 
@@ -328,7 +325,7 @@ namespace calculator
             // panel5
             // 
             panel5.Controls.Add(panel1);
-            panel5.Controls.Add(panel2);
+            panel5.Controls.Add(Order_2);
             panel5.Controls.Add(panel3);
             panel5.Location = new Point(36, 63);
             panel5.Name = "panel5";
@@ -372,13 +369,12 @@ namespace calculator
             Name = "Form1";
             Text = "Calculator";
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            Order_2.ResumeLayout(false);
+            Order_2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
-            panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel5.ResumeLayout(false);
@@ -399,7 +395,7 @@ namespace calculator
         private ComboBox comboBox1;
         private Label label1;
         private Panel panel1;
-        private Panel panel2;
+        private Panel Order_2;
         private TextBox textBox4;
         private TextBox textBox3;
         private TextBox textBox2;
@@ -415,7 +411,6 @@ namespace calculator
         private Button button4;
         private Button button3;
         private Panel panel5;
-        private TextBox textBox5;
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private FileSystemWatcher fileSystemWatcher1;
@@ -423,5 +418,6 @@ namespace calculator
         private FileSystemWatcher fileSystemWatcher3;
         private FileSystemWatcher fileSystemWatcher4;
         private FileSystemWatcher fileSystemWatcher5;
+        private Label label5;
     }
 }
