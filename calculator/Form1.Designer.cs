@@ -38,15 +38,15 @@ namespace calculator
             Order_2 = new Panel();
             textBox9 = new TextBox();
             textBox8 = new TextBox();
+            textBox7 = new TextBox();
             textBox6 = new TextBox();
+            textBox5 = new TextBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
-            textBox7 = new TextBox();
-            textBox5 = new TextBox();
             panel3 = new Panel();
             label4 = new Label();
             label3 = new Label();
@@ -120,6 +120,7 @@ namespace calculator
             comboBox1.Size = new Size(50, 23);
             comboBox1.TabIndex = 1;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+
             // 
             // label1
             // 
@@ -181,6 +182,14 @@ namespace calculator
             textBox8.Size = new Size(25, 25);
             textBox8.TabIndex = 8;
             // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(59, 157);
+            textBox7.Multiline = true;
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(25, 25);
+            textBox7.TabIndex = 7;
+            // 
             // textBox6
             // 
             textBox6.Location = new Point(139, 117);
@@ -188,6 +197,14 @@ namespace calculator
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(25, 25);
             textBox6.TabIndex = 6;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(99, 117);
+            textBox5.Multiline = true;
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(25, 25);
+            textBox5.TabIndex = 5;
             // 
             // pictureBox2
             // 
@@ -238,22 +255,6 @@ namespace calculator
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(25, 25);
             textBox1.TabIndex = 0;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(59, 157);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(25, 25);
-            textBox7.TabIndex = 7;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(99, 117);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(25, 25);
-            textBox5.TabIndex = 5;
             // 
             // panel3
             // 

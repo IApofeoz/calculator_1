@@ -5,17 +5,34 @@ namespace calculator
         public Form1()
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
+
+
+            if (comboBox1.SelectedIndex == 0)
             {
-                MessageBox.Show("Поля для значений пусты!");
+                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
+                {
+                    MessageBox.Show("Поля для значений пусты!");
+                }
+                else
+                {
+                    solut_2();
+                }
             }
-            else
+            if (comboBox1.SelectedIndex == 1)
             {
-                solut_2();
+                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "" || textBox7.Text == "" || textBox8.Text == "" || textBox9.Text == "")
+                {
+                    MessageBox.Show("Поля для значений пусты!");
+                }
+                else
+                {
+                    solut_3();
+                }
             }
 
         }
@@ -93,6 +110,7 @@ namespace calculator
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             if (comboBox1.SelectedIndex == 0)
             {
                 order_2();
