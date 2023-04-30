@@ -36,12 +36,17 @@ namespace calculator
             label1 = new Label();
             panel1 = new Panel();
             Order_2 = new Panel();
+            textBox9 = new TextBox();
+            textBox8 = new TextBox();
+            textBox6 = new TextBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
+            textBox7 = new TextBox();
+            textBox5 = new TextBox();
             panel3 = new Panel();
             label4 = new Label();
             label3 = new Label();
@@ -109,7 +114,7 @@ namespace calculator
             // comboBox1
             // 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.Items.AddRange(new object[] { "2", "3", "4" });
+            comboBox1.Items.AddRange(new object[] { "2", "3" });
             comboBox1.Location = new Point(150, 106);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(50, 23);
@@ -144,6 +149,11 @@ namespace calculator
             // Order_2
             // 
             Order_2.BackColor = Color.FromArgb(47, 55, 64);
+            Order_2.Controls.Add(textBox9);
+            Order_2.Controls.Add(textBox8);
+            Order_2.Controls.Add(textBox7);
+            Order_2.Controls.Add(textBox6);
+            Order_2.Controls.Add(textBox5);
             Order_2.Controls.Add(pictureBox2);
             Order_2.Controls.Add(pictureBox1);
             Order_2.Controls.Add(textBox4);
@@ -155,59 +165,95 @@ namespace calculator
             Order_2.Size = new Size(225, 262);
             Order_2.TabIndex = 6;
             // 
+            // textBox9
+            // 
+            textBox9.Location = new Point(139, 157);
+            textBox9.Multiline = true;
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(25, 25);
+            textBox9.TabIndex = 9;
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(99, 157);
+            textBox8.Multiline = true;
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(25, 25);
+            textBox8.TabIndex = 8;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(139, 117);
+            textBox6.Multiline = true;
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(25, 25);
+            textBox6.TabIndex = 6;
+            // 
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.White;
-            pictureBox2.Location = new Point(25, 55);
+            pictureBox2.Location = new Point(179, 62);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(10, 138);
+            pictureBox2.Size = new Size(10, 140);
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.White;
-            pictureBox1.Location = new Point(190, 55);
+            pictureBox1.Location = new Point(34, 62);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(10, 138);
+            pictureBox1.Size = new Size(10, 140);
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(138, 149);
+            textBox4.Location = new Point(59, 117);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(25, 25);
             textBox4.TabIndex = 3;
-            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(69, 149);
+            textBox3.Location = new Point(139, 77);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(25, 25);
             textBox3.TabIndex = 2;
-            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(138, 81);
+            textBox2.Location = new Point(99, 77);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(25, 25);
             textBox2.TabIndex = 1;
-            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(69, 81);
+            textBox1.Location = new Point(59, 77);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(25, 25);
             textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(59, 157);
+            textBox7.Multiline = true;
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(25, 25);
+            textBox7.TabIndex = 7;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(99, 117);
+            textBox5.Multiline = true;
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(25, 25);
+            textBox5.TabIndex = 5;
             // 
             // panel3
             // 
@@ -236,7 +282,6 @@ namespace calculator
             label3.Name = "label3";
             label3.Size = new Size(420, 339);
             label3.TabIndex = 0;
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -419,5 +464,10 @@ namespace calculator
         private FileSystemWatcher fileSystemWatcher4;
         private FileSystemWatcher fileSystemWatcher5;
         private Label label5;
+        private TextBox textBox9;
+        private TextBox textBox8;
+        private TextBox textBox7;
+        private TextBox textBox6;
+        private TextBox textBox5;
     }
 }
