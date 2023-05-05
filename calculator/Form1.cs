@@ -110,7 +110,7 @@ namespace calculator
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
             if (comboBox1.SelectedIndex == 0)
             {
                 order_2();

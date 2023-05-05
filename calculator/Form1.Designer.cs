@@ -120,7 +120,6 @@ namespace calculator
             comboBox1.Size = new Size(50, 23);
             comboBox1.TabIndex = 1;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-
             // 
             // label1
             // 
@@ -412,6 +411,7 @@ namespace calculator
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(label2);
+            MinimumSize = new Size(800, 550);
             Name = "Form1";
             Text = "Calculator";
             panel1.ResumeLayout(false);
