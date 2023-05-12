@@ -55,8 +55,6 @@ namespace calculator
             label5 = new Label();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
-            button5 = new Button();
-            button4 = new Button();
             button3 = new Button();
             panel5 = new Panel();
             fileSystemWatcher1 = new FileSystemWatcher();
@@ -64,6 +62,7 @@ namespace calculator
             fileSystemWatcher3 = new FileSystemWatcher();
             fileSystemWatcher4 = new FileSystemWatcher();
             fileSystemWatcher5 = new FileSystemWatcher();
+            button4 = new Button();
             button1 = new Button();
             panel1.SuspendLayout();
             Order_2.SuspendLayout();
@@ -299,7 +298,6 @@ namespace calculator
             panel4.Controls.Add(label5);
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(pictureBox3);
-            panel4.Controls.Add(button5);
             panel4.Controls.Add(button4);
             panel4.Controls.Add(button3);
             panel4.Location = new Point(36, 12);
@@ -339,26 +337,6 @@ namespace calculator
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(410, 8);
-            button5.Name = "button5";
-            button5.Size = new Size(94, 30);
-            button5.TabIndex = 3;
-            button5.Text = "3";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(290, 8);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 30);
-            button4.TabIndex = 1;
-            button4.Text = "2";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -404,6 +382,16 @@ namespace calculator
             // 
             fileSystemWatcher5.EnableRaisingEvents = true;
             fileSystemWatcher5.SynchronizingObject = this;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(290, 8);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 30);
+            button4.TabIndex = 1;
+            button4.Text = "'Умный'";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // Form1
             // 
@@ -456,8 +444,6 @@ namespace calculator
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Panel panel4;
-        private Button button5;
-        private Button button4;
         private Button button3;
         private Panel panel5;
         private PictureBox pictureBox4;
@@ -473,5 +459,6 @@ namespace calculator
         private TextBox textBox7;
         private TextBox textBox6;
         private TextBox textBox5;
+        private Button button4;
     }
 }

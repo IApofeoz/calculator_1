@@ -2,36 +2,65 @@ namespace calculator
 {
     public partial class Form1 : Form
     {
+        int method = 1;
         public Form1()
         {
             InitializeComponent();
             comboBox1.SelectedIndex = 0;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
-            if (comboBox1.SelectedIndex == 0)
+            if (method == 1)
             {
-                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
+                if (comboBox1.SelectedIndex == 0)
                 {
-                    MessageBox.Show("Поля для значений пусты!");
+                    if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
+                    {
+                        MessageBox.Show("Поля для значений пусты!");
+                    }
+                    else
+                    {
+                        solut_2_Tupoi();
+                    }
                 }
-                else
+                if (comboBox1.SelectedIndex == 1)
                 {
-                    solut_2_Tupoi();
+                    if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "" || textBox7.Text == "" || textBox8.Text == "" || textBox9.Text == "")
+                    {
+                        MessageBox.Show("Поля для значений пусты!");
+                    }
+                    else
+                    {
+                        solut_3_Tupoi();
+                    }
                 }
             }
-            if (comboBox1.SelectedIndex == 1)
+
+            if (method == 2)
             {
-                if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "" || textBox7.Text == "" || textBox8.Text == "" || textBox9.Text == "")
+                if (comboBox1.SelectedIndex == 0)
                 {
-                    MessageBox.Show("Поля для значений пусты!");
+                    if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
+                    {
+                        MessageBox.Show("Поля для значений пусты!");
+                    }
+                    else
+                    {
+                        solut_2_Tupoi();
+                    }
                 }
-                else
+                if (comboBox1.SelectedIndex == 1)
                 {
-                    solut_3_Tupoi();
+                    if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "" || textBox7.Text == "" || textBox8.Text == "" || textBox9.Text == "")
+                    {
+                        MessageBox.Show("Поля для значений пусты!");
+                    }
+                    else
+                    {
+                        solut_3_Smart();
+                    }
                 }
             }
 
@@ -62,10 +91,19 @@ namespace calculator
             label3.Text = textBox1.Text + "*" + textBox5.Text + "*" + textBox9.Text + "+" + textBox2.Text + "*" + textBox6.Text + "*" + textBox7.Text + "+" +
             textBox3.Text + "*" + textBox4.Text + "*" + textBox8.Text + "-" + textBox4.Text + "*" + textBox5.Text + "*" + textBox7.Text + "-" +
             textBox1.Text + "*" + textBox6.Text + "*" + textBox8.Text + "-" + textBox2.Text + "*" + textBox4.Text + "*" + textBox9.Text + "\r\n" + "Ответ: " +
-            Convert.ToString(Convert.ToInt16(textBox1) * Convert.ToInt16(textBox5) * Convert.ToInt16(textBox9) + Convert.ToInt16(textBox2) * Convert.ToInt16(textBox6) * Convert.ToInt16(textBox7) +
-            Convert.ToInt16(textBox3) * Convert.ToInt16(textBox4) * Convert.ToInt16(textBox8) - Convert.ToInt16(textBox4) * Convert.ToInt16(textBox5) * Convert.ToInt16(textBox7) -
-            Convert.ToInt16(textBox1) * Convert.ToInt16(textBox6) * Convert.ToInt16(textBox8) - Convert.ToInt16(textBox2) * Convert.ToInt16(textBox4) * Convert.ToInt16(textBox9));
+            Convert.ToString(Convert.ToInt16(textBox1.Text) * Convert.ToInt16(textBox5.Text) * Convert.ToInt16(textBox9.Text) + Convert.ToInt16(textBox2.Text) * Convert.ToInt16(textBox6.Text) * Convert.ToInt16(textBox7.Text) +
+            Convert.ToInt16(textBox3.Text) * Convert.ToInt16(textBox4.Text) * Convert.ToInt16(textBox8.Text) - Convert.ToInt16(textBox3.Text) * Convert.ToInt16(textBox5.Text) * Convert.ToInt16(textBox7.Text) -
+            Convert.ToInt16(textBox1.Text) * Convert.ToInt16(textBox6.Text) * Convert.ToInt16(textBox8.Text) - Convert.ToInt16(textBox2.Text) * Convert.ToInt16(textBox4.Text) * Convert.ToInt16(textBox9.Text));
+        }
 
+        private void solut_3_Smart()
+        {
+            label3.Text = textBox1.Text + " * (" + textBox5.Text + "*" + textBox9.Text + "-" + textBox6.Text + "*" + textBox8.Text + ") - " + textBox2.Text + " * ("
+            + textBox4.Text + "*" + textBox9.Text + "-" + textBox7.Text + "*" + textBox6.Text + ") + " + textBox3.Text + " * (" + textBox4.Text + "*" + textBox8.Text + "-" +
+            textBox7.Text + "*" + textBox5.Text + ")" + "\r\n" + "Ответ: " +
+            Convert.ToString(Convert.ToInt16(textBox1.Text) * (Convert.ToInt16(textBox5.Text) * Convert.ToInt16(textBox9.Text) - Convert.ToInt16(textBox8.Text) * Convert.ToInt16(textBox6.Text)) -
+            Convert.ToInt16(textBox2.Text) * (Convert.ToInt16(textBox4.Text) * Convert.ToInt16(textBox9.Text) - Convert.ToInt16(textBox7.Text) * Convert.ToInt16(textBox6.Text)) +
+            Convert.ToInt16(textBox3.Text) * (Convert.ToInt16(textBox4.Text) * Convert.ToInt16(textBox8.Text) - Convert.ToInt16(textBox7.Text) * Convert.ToInt16(textBox5.Text)));
         }
 
         private void order_3()
@@ -126,16 +164,17 @@ namespace calculator
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Способ выбран!");
+            method = 1;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Способ выбран!");
+            method = 2;
+
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Способ выбран!");
-        }
+
     }
 }
