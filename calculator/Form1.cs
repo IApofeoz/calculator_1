@@ -20,7 +20,7 @@ namespace calculator
                 }
                 else
                 {
-                    solut_2();
+                    solut_2_Tupoi();
                 }
             }
             if (comboBox1.SelectedIndex == 1)
@@ -31,7 +31,7 @@ namespace calculator
                 }
                 else
                 {
-                    solut_3();
+                    solut_3_Tupoi();
                 }
             }
 
@@ -51,13 +51,13 @@ namespace calculator
             textBox9.Text = "";
         }
 
-        private void solut_2()
+        private void solut_2_Tupoi()
         {
             label3.Text = textBox1.Text + "*" + textBox4.Text + "-" + textBox2.Text + "*" + textBox3.Text + "\r\n" + "Ответ: " +
             Convert.ToString(Convert.ToInt16(textBox1.Text) * Convert.ToInt16(textBox4.Text) - Convert.ToInt16(textBox2.Text) * Convert.ToInt16(textBox3.Text));
         }
 
-        private void solut_3()
+        private void solut_3_Tupoi()
         {
             label3.Text = textBox1.Text + "*" + textBox5.Text + "*" + textBox9.Text + "+" + textBox2.Text + "*" + textBox6.Text + "*" + textBox7.Text + "+" +
             textBox3.Text + "*" + textBox4.Text + "*" + textBox8.Text + "-" + textBox4.Text + "*" + textBox5.Text + "*" + textBox7.Text + "-" +
@@ -123,5 +123,19 @@ namespace calculator
 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Способ выбран!");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Способ выбран!");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Способ выбран!");
+        }
     }
 }

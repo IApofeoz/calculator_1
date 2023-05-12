@@ -322,7 +322,7 @@ namespace calculator
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.InitialImage = null;
-            pictureBox4.Location = new Point(606, 0);
+            pictureBox4.Location = new Point(593, 0);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(47, 45);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -333,7 +333,7 @@ namespace calculator
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.InitialImage = null;
-            pictureBox3.Location = new Point(659, 0);
+            pictureBox3.Location = new Point(646, 0);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(47, 45);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -348,6 +348,7 @@ namespace calculator
             button5.TabIndex = 3;
             button5.Text = "3";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -357,6 +358,7 @@ namespace calculator
             button4.TabIndex = 1;
             button4.Text = "2";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -366,6 +368,7 @@ namespace calculator
             button3.TabIndex = 0;
             button3.Text = "'Тупой'";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // panel5
             // 
