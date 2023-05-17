@@ -55,6 +55,7 @@ namespace calculator
             label5 = new Label();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
+            button4 = new Button();
             button3 = new Button();
             panel5 = new Panel();
             fileSystemWatcher1 = new FileSystemWatcher();
@@ -62,7 +63,6 @@ namespace calculator
             fileSystemWatcher3 = new FileSystemWatcher();
             fileSystemWatcher4 = new FileSystemWatcher();
             fileSystemWatcher5 = new FileSystemWatcher();
-            button4 = new Button();
             button1 = new Button();
             panel1.SuspendLayout();
             Order_2.SuspendLayout();
@@ -112,7 +112,9 @@ namespace calculator
             // 
             // comboBox1
             // 
+            comboBox1.BackColor = Color.FromArgb(67, 76, 94);
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.ForeColor = Color.Yellow;
             comboBox1.Items.AddRange(new object[] { "2", "3" });
             comboBox1.Location = new Point(150, 106);
             comboBox1.Name = "comboBox1";
@@ -209,7 +211,7 @@ namespace calculator
             pictureBox2.BackColor = Color.White;
             pictureBox2.Location = new Point(179, 62);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(10, 140);
+            pictureBox2.Size = new Size(5, 140);
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             // 
@@ -218,7 +220,7 @@ namespace calculator
             pictureBox1.BackColor = Color.White;
             pictureBox1.Location = new Point(34, 62);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(10, 140);
+            pictureBox1.Size = new Size(5, 140);
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
@@ -267,6 +269,7 @@ namespace calculator
             // label4
             // 
             label4.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.Yellow;
             label4.Location = new Point(63, 14);
             label4.Name = "label4";
             label4.Size = new Size(321, 40);
@@ -288,9 +291,9 @@ namespace calculator
             label2.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(518, 487);
             label2.Name = "label2";
-            label2.Size = new Size(254, 15);
+            label2.Size = new Size(258, 15);
             label2.TabIndex = 8;
-            label2.Text = "Created by IApofeoz && 4igar && Vlados-Poltos\r\n";
+            label2.Text = "Created by IApofeoz && 41g0r && Vlados-Poltos\r\n";
             // 
             // panel4
             // 
@@ -307,8 +310,9 @@ namespace calculator
             // 
             // label5
             // 
-            label5.BackColor = Color.White;
-            label5.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.BackColor = Color.FromArgb(67, 76, 94);
+            label5.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.Yellow;
             label5.Location = new Point(25, 8);
             label5.Name = "label5";
             label5.Size = new Size(119, 30);
@@ -338,14 +342,34 @@ namespace calculator
             pictureBox3.TabIndex = 5;
             pictureBox3.TabStop = false;
             // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(67, 76, 94);
+            button4.Cursor = Cursors.Hand;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.Yellow;
+            button4.Location = new Point(290, 8);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 30);
+            button4.TabIndex = 1;
+            button4.Text = "'Умный'";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
             // button3
             // 
+            button3.BackColor = Color.FromArgb(67, 76, 94);
+            button3.Cursor = Cursors.Hand;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.Yellow;
             button3.Location = new Point(170, 8);
             button3.Name = "button3";
             button3.Size = new Size(94, 30);
             button3.TabIndex = 0;
             button3.Text = "'Тупой'";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // panel5
@@ -383,22 +407,12 @@ namespace calculator
             fileSystemWatcher5.EnableRaisingEvents = true;
             fileSystemWatcher5.SynchronizingObject = this;
             // 
-            // button4
-            // 
-            button4.Location = new Point(290, 8);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 30);
-            button4.TabIndex = 1;
-            button4.Text = "'Умный'";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 52, 64);
-            ClientSize = new Size(784, 511);
+            ClientSize = new Size(788, 514);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(label2);
