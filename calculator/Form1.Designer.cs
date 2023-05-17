@@ -63,6 +63,8 @@ namespace calculator
             fileSystemWatcher3 = new FileSystemWatcher();
             fileSystemWatcher4 = new FileSystemWatcher();
             fileSystemWatcher5 = new FileSystemWatcher();
+            pictureBox5 = new PictureBox();
+            pictureBox6 = new PictureBox();
             button1 = new Button();
             panel1.SuspendLayout();
             Order_2.SuspendLayout();
@@ -78,6 +80,8 @@ namespace calculator
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -124,6 +128,7 @@ namespace calculator
             // 
             // label1
             // 
+            label1.BackColor = Color.FromArgb(67, 76, 94);
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Yellow;
@@ -289,11 +294,13 @@ namespace calculator
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(518, 487);
+            label2.ForeColor = Color.Yellow;
+            label2.Location = new Point(530, 526);
             label2.Name = "label2";
             label2.Size = new Size(258, 15);
             label2.TabIndex = 8;
             label2.Text = "Created by IApofeoz && 41g0r && Vlados-Poltos\r\n";
+            label2.Click += label2_Click_1;
             // 
             // panel4
             // 
@@ -303,7 +310,7 @@ namespace calculator
             panel4.Controls.Add(pictureBox3);
             panel4.Controls.Add(button4);
             panel4.Controls.Add(button3);
-            panel4.Location = new Point(36, 12);
+            panel4.Location = new Point(36, 33);
             panel4.Name = "panel4";
             panel4.Size = new Size(706, 45);
             panel4.TabIndex = 9;
@@ -377,7 +384,7 @@ namespace calculator
             panel5.Controls.Add(panel1);
             panel5.Controls.Add(Order_2);
             panel5.Controls.Add(panel3);
-            panel5.Location = new Point(36, 63);
+            panel5.Location = new Point(36, 90);
             panel5.Name = "panel5";
             panel5.Size = new Size(706, 414);
             panel5.TabIndex = 10;
@@ -407,18 +414,44 @@ namespace calculator
             fileSystemWatcher5.EnableRaisingEvents = true;
             fileSystemWatcher5.SynchronizingObject = this;
             // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.InitialImage = null;
+            pictureBox5.Location = new Point(748, -5);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(57, 32);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 7;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.InitialImage = null;
+            pictureBox6.Location = new Point(699, -5);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(51, 32);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.TabIndex = 8;
+            pictureBox6.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 52, 64);
-            ClientSize = new Size(788, 514);
+            ClientSize = new Size(800, 550);
+            Controls.Add(pictureBox6);
             Controls.Add(panel5);
+            Controls.Add(pictureBox5);
             Controls.Add(panel4);
             Controls.Add(label2);
+            FormBorderStyle = FormBorderStyle.None;
             MinimumSize = new Size(800, 550);
             Name = "Form1";
             Text = "Calculator";
+            Load += Form1_Load;
             panel1.ResumeLayout(false);
             Order_2.ResumeLayout(false);
             Order_2.PerformLayout();
@@ -435,6 +468,8 @@ namespace calculator
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher3).EndInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher4).EndInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -474,5 +509,7 @@ namespace calculator
         private TextBox textBox6;
         private TextBox textBox5;
         private Button button4;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox5;
     }
 }
