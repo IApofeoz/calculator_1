@@ -300,7 +300,6 @@ namespace calculator
             label2.Size = new Size(258, 15);
             label2.TabIndex = 8;
             label2.Text = "Created by IApofeoz && 41g0r && Vlados-Poltos\r\n";
-            label2.Click += label2_Click_1;
             // 
             // panel4
             // 
@@ -416,6 +415,7 @@ namespace calculator
             // 
             // pictureBox5
             // 
+            pictureBox5.Cursor = Cursors.Hand;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.InitialImage = null;
             pictureBox5.Location = new Point(748, -5);
@@ -424,9 +424,11 @@ namespace calculator
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 7;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox6
             // 
+            pictureBox6.Cursor = Cursors.Hand;
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.InitialImage = null;
             pictureBox6.Location = new Point(699, -5);
@@ -435,6 +437,7 @@ namespace calculator
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 8;
             pictureBox6.TabStop = false;
+            pictureBox6.Click += pictureBox6_Click_1;
             // 
             // Form1
             // 
@@ -451,7 +454,6 @@ namespace calculator
             MinimumSize = new Size(800, 550);
             Name = "Form1";
             Text = "Calculator";
-            Load += Form1_Load;
             panel1.ResumeLayout(false);
             Order_2.ResumeLayout(false);
             Order_2.PerformLayout();
