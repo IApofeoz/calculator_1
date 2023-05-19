@@ -52,9 +52,8 @@ namespace calculator
             label3 = new Label();
             label2 = new Label();
             panel4 = new Panel();
+            pictureBox7 = new PictureBox();
             label5 = new Label();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
             button4 = new Button();
             button3 = new Button();
             panel5 = new Panel();
@@ -72,8 +71,7 @@ namespace calculator
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher2).BeginInit();
@@ -88,14 +86,9 @@ namespace calculator
             // 
             button1.BackColor = Color.FromArgb(67, 76, 94);
             button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(button1, "button1");
             button1.ForeColor = Color.Yellow;
-            button1.Location = new Point(25, 14);
             button1.Name = "button1";
-            button1.Size = new Size(175, 40);
-            button1.TabIndex = 0;
-            button1.Text = "Вычислить";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -103,14 +96,9 @@ namespace calculator
             // 
             button2.BackColor = Color.FromArgb(67, 76, 94);
             button2.Cursor = Cursors.Hand;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(button2, "button2");
             button2.ForeColor = Color.Yellow;
-            button2.Location = new Point(25, 60);
             button2.Name = "button2";
-            button2.Size = new Size(175, 40);
-            button2.TabIndex = 1;
-            button2.Text = "Очистить";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -119,38 +107,27 @@ namespace calculator
             comboBox1.BackColor = Color.FromArgb(67, 76, 94);
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.ForeColor = Color.Yellow;
-            comboBox1.Items.AddRange(new object[] { "2", "3" });
-            comboBox1.Location = new Point(150, 106);
+            comboBox1.Items.AddRange(new object[] { resources.GetString("comboBox1.Items"), resources.GetString("comboBox1.Items1") });
+            resources.ApplyResources(comboBox1, "comboBox1");
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(50, 23);
-            comboBox1.TabIndex = 1;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label1
             // 
             label1.BackColor = Color.FromArgb(67, 76, 94);
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(label1, "label1");
             label1.ForeColor = Color.Yellow;
-            label1.Location = new Point(25, 103);
             label1.Name = "label1";
-            label1.Size = new Size(119, 32);
-            label1.TabIndex = 3;
-            label1.Text = "Порядок";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
-            panel1.AutoSize = true;
+            resources.ApplyResources(panel1, "panel1");
             panel1.BackColor = Color.FromArgb(47, 55, 64);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(225, 146);
-            panel1.TabIndex = 5;
             // 
             // Order_2
             // 
@@ -166,200 +143,125 @@ namespace calculator
             Order_2.Controls.Add(textBox3);
             Order_2.Controls.Add(textBox2);
             Order_2.Controls.Add(textBox1);
-            Order_2.Location = new Point(0, 152);
+            resources.ApplyResources(Order_2, "Order_2");
             Order_2.Name = "Order_2";
-            Order_2.Size = new Size(225, 262);
-            Order_2.TabIndex = 6;
             // 
             // textBox9
             // 
-            textBox9.Location = new Point(139, 157);
-            textBox9.Multiline = true;
+            resources.ApplyResources(textBox9, "textBox9");
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(25, 25);
-            textBox9.TabIndex = 9;
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(99, 157);
-            textBox8.Multiline = true;
+            resources.ApplyResources(textBox8, "textBox8");
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(25, 25);
-            textBox8.TabIndex = 8;
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(59, 157);
-            textBox7.Multiline = true;
+            resources.ApplyResources(textBox7, "textBox7");
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(25, 25);
-            textBox7.TabIndex = 7;
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(139, 117);
-            textBox6.Multiline = true;
+            resources.ApplyResources(textBox6, "textBox6");
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(25, 25);
-            textBox6.TabIndex = 6;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(99, 117);
-            textBox5.Multiline = true;
+            resources.ApplyResources(textBox5, "textBox5");
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(25, 25);
-            textBox5.TabIndex = 5;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.White;
-            pictureBox2.Location = new Point(179, 62);
+            resources.ApplyResources(pictureBox2, "pictureBox2");
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(5, 140);
-            pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.White;
-            pictureBox1.Location = new Point(34, 62);
+            resources.ApplyResources(pictureBox1, "pictureBox1");
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(5, 140);
-            pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(59, 117);
-            textBox4.Multiline = true;
+            resources.ApplyResources(textBox4, "textBox4");
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(25, 25);
-            textBox4.TabIndex = 3;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(139, 77);
-            textBox3.Multiline = true;
+            resources.ApplyResources(textBox3, "textBox3");
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(25, 25);
-            textBox3.TabIndex = 2;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(99, 77);
-            textBox2.Multiline = true;
+            resources.ApplyResources(textBox2, "textBox2");
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(25, 25);
-            textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(59, 77);
-            textBox1.Multiline = true;
+            resources.ApplyResources(textBox1, "textBox1");
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(25, 25);
-            textBox1.TabIndex = 0;
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(47, 55, 64);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label3);
-            panel3.Location = new Point(256, 0);
+            resources.ApplyResources(panel3, "panel3");
             panel3.Name = "panel3";
-            panel3.Size = new Size(450, 414);
-            panel3.TabIndex = 7;
             // 
             // label4
             // 
-            label4.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(label4, "label4");
             label4.ForeColor = Color.Yellow;
-            label4.Location = new Point(63, 14);
             label4.Name = "label4";
-            label4.Size = new Size(321, 40);
-            label4.TabIndex = 1;
-            label4.Text = "Решение";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            label3.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(14, 60);
+            resources.ApplyResources(label3, "label3");
             label3.Name = "label3";
-            label3.Size = new Size(420, 339);
-            label3.TabIndex = 0;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(label2, "label2");
             label2.ForeColor = Color.Yellow;
-            label2.Location = new Point(530, 526);
             label2.Name = "label2";
-            label2.Size = new Size(258, 15);
-            label2.TabIndex = 8;
-            label2.Text = "Created by IApofeoz && 41g0r && Vlados-Poltos\r\n";
             // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(47, 55, 64);
+            panel4.Controls.Add(pictureBox7);
             panel4.Controls.Add(label5);
-            panel4.Controls.Add(pictureBox4);
-            panel4.Controls.Add(pictureBox3);
             panel4.Controls.Add(button4);
             panel4.Controls.Add(button3);
-            panel4.Location = new Point(36, 33);
+            resources.ApplyResources(panel4, "panel4");
             panel4.Name = "panel4";
-            panel4.Size = new Size(706, 45);
-            panel4.TabIndex = 9;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Cursor = Cursors.Hand;
+            resources.ApplyResources(pictureBox7, "pictureBox7");
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.TabStop = false;
+            pictureBox7.Click += pictureBox7_Click;
             // 
             // label5
             // 
             label5.BackColor = Color.FromArgb(67, 76, 94);
-            label5.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(label5, "label5");
             label5.ForeColor = Color.Yellow;
-            label5.Location = new Point(25, 8);
             label5.Name = "label5";
-            label5.Size = new Size(119, 30);
-            label5.TabIndex = 2;
-            label5.Text = "Способ решения";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.InitialImage = null;
-            pictureBox4.Location = new Point(593, 0);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(47, 45);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 6;
-            pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.InitialImage = null;
-            pictureBox3.Location = new Point(646, 0);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(47, 45);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 5;
-            pictureBox3.TabStop = false;
             // 
             // button4
             // 
             button4.BackColor = Color.FromArgb(67, 76, 94);
             button4.Cursor = Cursors.Hand;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(button4, "button4");
             button4.ForeColor = Color.Yellow;
-            button4.Location = new Point(290, 8);
             button4.Name = "button4";
-            button4.Size = new Size(94, 30);
-            button4.TabIndex = 1;
-            button4.Text = "'Умный'";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
@@ -367,14 +269,9 @@ namespace calculator
             // 
             button3.BackColor = Color.FromArgb(67, 76, 94);
             button3.Cursor = Cursors.Hand;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            resources.ApplyResources(button3, "button3");
             button3.ForeColor = Color.Yellow;
-            button3.Location = new Point(170, 8);
             button3.Name = "button3";
-            button3.Size = new Size(94, 30);
-            button3.TabIndex = 0;
-            button3.Text = "'Тупой'";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
@@ -383,10 +280,8 @@ namespace calculator
             panel5.Controls.Add(panel1);
             panel5.Controls.Add(Order_2);
             panel5.Controls.Add(panel3);
-            panel5.Location = new Point(36, 90);
+            resources.ApplyResources(panel5, "panel5");
             panel5.Name = "panel5";
-            panel5.Size = new Size(706, 414);
-            panel5.TabIndex = 10;
             // 
             // fileSystemWatcher1
             // 
@@ -416,44 +311,31 @@ namespace calculator
             // pictureBox5
             // 
             pictureBox5.Cursor = Cursors.Hand;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.InitialImage = null;
-            pictureBox5.Location = new Point(748, -5);
+            resources.ApplyResources(pictureBox5, "pictureBox5");
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(57, 32);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 7;
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox6
             // 
             pictureBox6.Cursor = Cursors.Hand;
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.InitialImage = null;
-            pictureBox6.Location = new Point(699, -5);
+            resources.ApplyResources(pictureBox6, "pictureBox6");
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(51, 32);
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox6.TabIndex = 8;
             pictureBox6.TabStop = false;
             pictureBox6.Click += pictureBox6_Click_1;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 52, 64);
-            ClientSize = new Size(800, 550);
             Controls.Add(pictureBox6);
             Controls.Add(panel5);
             Controls.Add(pictureBox5);
             Controls.Add(panel4);
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;
-            MinimumSize = new Size(800, 550);
             Name = "Form1";
-            Text = "Calculator";
             panel1.ResumeLayout(false);
             Order_2.ResumeLayout(false);
             Order_2.PerformLayout();
@@ -461,8 +343,7 @@ namespace calculator
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
@@ -478,7 +359,6 @@ namespace calculator
 
         #endregion
 
-        private Button button1;
         private Button button2;
         private ComboBox comboBox1;
         private Label label1;
@@ -497,8 +377,6 @@ namespace calculator
         private Panel panel4;
         private Button button3;
         private Panel panel5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
         private FileSystemWatcher fileSystemWatcher1;
         private FileSystemWatcher fileSystemWatcher2;
         private FileSystemWatcher fileSystemWatcher3;
@@ -513,5 +391,6 @@ namespace calculator
         private Button button4;
         private PictureBox pictureBox6;
         private PictureBox pictureBox5;
+        private PictureBox pictureBox7;
     }
 }

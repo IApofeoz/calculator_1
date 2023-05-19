@@ -2,9 +2,15 @@ namespace calculator
 {
     public partial class Form1 : Form
     {
-        int method = 1;
+
         public Form1()
         {
+
+            if (!String.IsNullOrEmpty(Properties.Settings.Default.Language))
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
+                System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo(Properties.Settings.Default.Language);
+            }
             InitializeComponent();
             comboBox1.SelectedIndex = 0;
             this.MouseDown += new MouseEventHandler((o, e) =>
@@ -14,6 +20,8 @@ namespace calculator
                 this.WndProc(ref message);
             });
         }
+        int method = 1;
+        Form2 f2;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -83,6 +91,7 @@ namespace calculator
             textBox7.Text = "";
             textBox8.Text = "";
             textBox9.Text = "";
+            
         }
 
         private void solut_2_Tupoi()
@@ -168,14 +177,14 @@ namespace calculator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Способ выбран!");
+            
             method = 1;
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Способ выбран!");
+            
             method = 2;
 
         }
@@ -189,5 +198,12 @@ namespace calculator
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            f2 = new Form2();
+            f2.Show();
+        }
+
     }
 }
