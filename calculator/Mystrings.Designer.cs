@@ -61,6 +61,15 @@ namespace calculator {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Версия: .
+        /// </summary>
+        internal static string Cur_vers {
+            get {
+                return ResourceManager.GetString("Cur_vers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Чтобы применить язык необходимо перезапустить программу.
         /// </summary>
         internal static string ExitRequest {

@@ -1,10 +1,21 @@
+using Npgsql;
+using System.Net;
+using System.Reflection;
+
 namespace calculator
 {
     public partial class Form1 : Form
     {
+        string curver = Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
+        private const string connectionString = "Server=194.169.163.175;Port=5432;Database=bnik;User Id=bnik;Password=123;";
+        private const string query = "SELECT vers FROM cur_vers";
+        public string versiontxtfile;
+
+
 
         public Form1()
         {
+
 
             if (!String.IsNullOrEmpty(Properties.Settings.Default.Language))
             {
@@ -91,7 +102,7 @@ namespace calculator
             textBox7.Text = "";
             textBox8.Text = "";
             textBox9.Text = "";
-            
+
         }
 
         private void solut_2_Tupoi()
@@ -177,14 +188,14 @@ namespace calculator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
             method = 1;
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
+
             method = 2;
 
         }
@@ -205,5 +216,181 @@ namespace calculator
             f2.Show();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //string dbVersion = GetDatabaseVersion();
+
+            //if (dbVersion == curver)
+            //{
+            //    MessageBox.Show("Версии совпадают.", "Проверка версии", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //else
+            //{
+            //    if (MessageBox.Show("Типо текст", "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            //    {
+            //        if (Internet_checker.OK())
+            //        {
+            //            string siteUrl = "http://194.169.163.175:30080/VasyaNikita/app/";
+            //            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            //            string folderPath = Path.Combine(desktopPath, "Application");
+
+
+
+            //            // Создаем папку на рабочем столе
+            //            Directory.CreateDirectory(folderPath);
+            //            string papka = Path.Combine();
+
+            //            string[] fileUrls = GetFileUrls(siteUrl);
+
+            //            using (WebClient wc = new WebClient())
+            //            {
+            //                try
+            //                {
+            //                    wc.DownloadFile("http://194.169.163.175:30080/VasyaNikita/app/en", folderPath);
+            //                }
+            //                catch { }
+            //            }
+
+            //            for (int i = 0; i < fileUrls.Length; i++)
+            //            {
+            //                string fileUrl = fileUrls[i];
+            //                string fileName = Path.GetFileName(fileUrl);
+            //                string filePath = Path.Combine(folderPath, fileName);
+
+
+            //                using (WebClient client = new WebClient())
+            //                {
+            //                    try
+            //                    {
+            //                        client.DownloadFile(fileUrl, filePath);
+
+
+            //                    }
+            //                    catch (Exception ex)
+            //                    {
+
+            //                    }
+
+
+
+
+            //                }
+
+            //            }
+            //        }
+            //    }
+
+            //}
+
+            UpdateVersionFromDatabase();
+
+        }
+
+        private void UpdateVersionFromDatabase()
+        {
+            try
+            {
+                // Подключение к базе данных
+                using (var connection = new NpgsqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Запрос для получения значения из столбца app_version
+                    string query = "SELECT vers FROM cur_vers WHERE id = 1;";
+
+                    using (var command = new NpgsqlCommand(query, connection))
+                    {
+                        // Получение значения из базы данных
+                        string dbVersion = command.ExecuteScalar()?.ToString();
+
+                        if (dbVersion != null)
+                        {
+                            // Чтение значения из файла version.txt
+                            string versionFilePath = Path.Combine(Application.StartupPath, "version.txt");
+                            string fileContent = File.ReadAllText(versionFilePath);
+
+                            // Сравнение значения из базы данных и файла
+                            if (dbVersion != fileContent)
+                            {
+                                // Обновление значения в файле
+                                File.WriteAllText(versionFilePath, dbVersion);
+
+                                // Присваивание нового значения переменной versionapptxt
+                                versiontxtfile = dbVersion;
+
+                                // Вывод сообщения об успешном обновлении
+                                MessageBox.Show("Файл версии успешно обновлен.", "Успех");
+                                Application.Restart();
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Значение версии в базе данных и файле уже совпадают.", "Информация");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Значение версии не найдено в базе данных.", "Ошибка");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при обновлении версии: " + ex.Message, "Ошибка");
+            }
+        }
+
+        static string[] GetFileUrls(string siteUrl)
+        {
+            using (WebClient client = new WebClient())
+            {
+                string html = client.DownloadString(siteUrl);
+
+                // Используйте вашу логику для извлечения URL файлов из HTML-страницы
+                // Например, вы можете использовать регулярные выражения или HTML-парсеры
+
+                // Пример получения URL файлов с помощью регулярных выражений:
+                var fileMatches = System.Text.RegularExpressions.Regex.Matches(html, "<a\\s+href\\s*=\\s*\"([^\"]+)\"");
+
+                string[] fileUrls = new string[fileMatches.Count];
+                for (int i = 0; i < fileMatches.Count; i++)
+                {
+                    string fileUrl = fileMatches[i].Groups[1].Value;
+                    fileUrls[i] = new Uri(new Uri(siteUrl), fileUrl).AbsoluteUri;
+                }
+
+                return fileUrls;
+            }
+        }
+
+
+        private string GetDatabaseVersion()
+        {
+            string version = null;
+
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                {
+                    using (NpgsqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            version = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+
+            return version;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //label6.Text = MyStrings.Cur_vers + Assembly.GetExecutingAssembly().GetName().Version.ToString(3);
+        }
     }
 }

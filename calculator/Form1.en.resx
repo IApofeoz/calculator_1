@@ -133,7 +133,7 @@
   <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAKQ9JREFUeF7t1dt2G0uSBNH5/5/ucZ2W1FQeI0USEXkrW0vbH5xAoSIrAP3ff/7z
+        vAAADrwBlbxySQAAKQ9JREFUeF7t1dt2G0uSBNH5/5/ucZ2W1FQeI0USEXkrW0vbH5xAoSIrAP3ff/7z
         H0mS9DBYSpKku2EpSZLuhqUkSboblpIk6W5YSpKku2EpSZLuhqUkSboblpIk6W5YSpKku2EpSZLuhqUk
         SboblpIk6W5YSpKku2EpSZLuhqUkSboblpIk6W5YSpKku2EpSZLuhqUkSboblpIk6W5YSpKku2EpSZLu
         hqUkSboblpIk6W5YSpKku2HZ48dnSWrGX786CUm9+MtXDcse44CS/oK/SudJSPo8/iJVw7LHOKD0ePxV
@@ -327,6 +327,30 @@
   </data>
   <data name="button3.Text" xml:space="preserve">
     <value>'Dumb'</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt, style=Bold, Italic</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 16</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="button5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="button5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 521</value>
+  </data>
+  <data name="button5.Text" xml:space="preserve">
+    <value>Update</value>
   </data>
   <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

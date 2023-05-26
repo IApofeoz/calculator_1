@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Cur_vers" xml:space="preserve">
+    <value>Версия: </value>
+  </data>
   <data name="ExitRequest" xml:space="preserve">
     <value>Чтобы применить язык необходимо перезапустить программу</value>
   </data>

@@ -27,7 +27,8 @@ namespace calculator
         {
             if (MessageBox.Show(MyStrings.ExitRequest, MyStrings.ExitTitle, MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                Application.Exit();
+                Application.Restart();
+                Environment.Exit(0);
             }
         }
 
