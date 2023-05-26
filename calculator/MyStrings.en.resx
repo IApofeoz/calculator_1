@@ -126,4 +126,7 @@
   <data name="ExitTitle" xml:space="preserve">
     <value>Exit</value>
   </data>
+  <data name="Vers" xml:space="preserve">
+    <value>Version</value>
+  </data>
 </root>

@@ -12,7 +12,6 @@ namespace calculator
         public string versiontxtfile;
 
 
-
         public Form1()
         {
 
@@ -30,6 +29,11 @@ namespace calculator
                 Message message = Message.Create(base.Handle, 0xA1, new IntPtr(2), IntPtr.Zero);
                 this.WndProc(ref message);
             });
+
+            string versionFilePath = Path.Combine(Application.StartupPath, "version.txt");
+            string versionshow = File.ReadAllText(versionFilePath);
+
+            label7.Text = versionshow;
         }
         int method = 1;
         Form2 f2;
@@ -315,8 +319,10 @@ namespace calculator
                                 // Обновление значения в файле
                                 File.WriteAllText(versionFilePath, dbVersion);
 
+
                                 // Присваивание нового значения переменной versionapptxt
                                 versiontxtfile = dbVersion;
+
 
                                 // Вывод сообщения об успешном обновлении
                                 MessageBox.Show("Файл версии успешно обновлен.", "Успех");
@@ -341,56 +347,58 @@ namespace calculator
             }
         }
 
-        static string[] GetFileUrls(string siteUrl)
-        {
-            using (WebClient client = new WebClient())
-            {
-                string html = client.DownloadString(siteUrl);
+        //static string[] GetFileUrls(string siteUrl)
+        //{
+        //    using (WebClient client = new WebClient())
+        //    {
+        //        string html = client.DownloadString(siteUrl);
 
-                // Используйте вашу логику для извлечения URL файлов из HTML-страницы
-                // Например, вы можете использовать регулярные выражения или HTML-парсеры
+        //        // Используйте вашу логику для извлечения URL файлов из HTML-страницы
+        //        // Например, вы можете использовать регулярные выражения или HTML-парсеры
 
-                // Пример получения URL файлов с помощью регулярных выражений:
-                var fileMatches = System.Text.RegularExpressions.Regex.Matches(html, "<a\\s+href\\s*=\\s*\"([^\"]+)\"");
+        //        // Пример получения URL файлов с помощью регулярных выражений:
+        //        var fileMatches = System.Text.RegularExpressions.Regex.Matches(html, "<a\\s+href\\s*=\\s*\"([^\"]+)\"");
 
-                string[] fileUrls = new string[fileMatches.Count];
-                for (int i = 0; i < fileMatches.Count; i++)
-                {
-                    string fileUrl = fileMatches[i].Groups[1].Value;
-                    fileUrls[i] = new Uri(new Uri(siteUrl), fileUrl).AbsoluteUri;
-                }
+        //        string[] fileUrls = new string[fileMatches.Count];
+        //        for (int i = 0; i < fileMatches.Count; i++)
+        //        {
+        //            string fileUrl = fileMatches[i].Groups[1].Value;
+        //            fileUrls[i] = new Uri(new Uri(siteUrl), fileUrl).AbsoluteUri;
+        //        }
 
-                return fileUrls;
-            }
-        }
+        //        return fileUrls;
+        //    }
+        //}
 
 
-        private string GetDatabaseVersion()
-        {
-            string version = null;
+        //private string GetDatabaseVersion()
+        //{
+        //    string version = null;
 
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
-            {
-                connection.Open();
+        //    using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+        //    {
+        //        connection.Open();
 
-                using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
-                {
-                    using (NpgsqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            version = reader.GetString(0);
-                        }
-                    }
-                }
-            }
+        //        using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+        //        {
+        //            using (NpgsqlDataReader reader = command.ExecuteReader())
+        //            {
+        //                if (reader.Read())
+        //                {
+        //                    version = reader.GetString(0);
+        //                }
+        //            }
+        //        }
+        //    }
 
-            return version;
-        }
+        //    return version;
+        //}
 
         private void Form1_Load(object sender, EventArgs e)
         {
             //label6.Text = MyStrings.Cur_vers + Assembly.GetExecutingAssembly().GetName().Version.ToString(3);
+
+
         }
     }
 }

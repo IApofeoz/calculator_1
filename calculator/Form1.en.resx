@@ -328,44 +328,6 @@
   <data name="button3.Text" xml:space="preserve">
     <value>'Dumb'</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 9.75pt, style=Bold, Italic</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 16</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Version</value>
-  </data>
-  <data name="button5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="button5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9pt, style=Bold</value>
-  </data>
-  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 521</value>
-  </data>
-  <data name="button5.Text" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAN0AAABtCAIAAACqbPM4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAdpJREFUeF7t0jFuHTEMQEHfyKVb3/84vkDygQApWKSRtH5WBph6lxTf2/vHJ9To
-        kiJdUqRLinRJkS4p0iVFuqRIlxTpkiJdUqRLinRJkS4p0iVFuqRIlxTpkiJdUqRLinRJkS4p0iVFuqRI
-        lxTpkiJdUqRLinRJkS4p0iVFuqRIlxTpkiJdUqRLinRJkS4p0iVFuqRIlxTpkiJdUqRLinRJkS4p0iVF
-        uqRIlxSlu/z19cZp480jvnms8UakjGM96el/j835WcY1z3niT2M3LjBOvN3ZH4xluMw490YHPz124Fbj
-        7luc6nKMzt3G9dcd6XIMzfVGAOt0yQYjgHW6ZIMRwDpdssEIYJ0u2WAEsE6XbDACWKdLNhgBrNMlG4wA
-        1umSDUYA63TJBiOAdbpkgxHAuiNdvoy5udu4/rpTXb6M0bnVuPsWB7t8GQtwmXHujc52+cdYhguME2/3
-        RJd/jd34ccZBz3m0y2HsTNA42WO+s8t/Gw/EIePZI7pd8j/TJUW6pEiXFOmSIl1SpEuKdEmRLinSJUW6
-        pEiXFOmSIl1SpEuKdEmRLinSJUW6pEiXFOmSIl1SpEuKdEmRLinSJUW6pEiXFOmSIl1SpEuKdEmRLinS
-        JUW6pOfj8zcwUeJF0s91YQAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAN0AAABtCAYAAAAlDmRvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -396,5 +358,46 @@
         Mna0fOno8RwoK76iu1NQxm6WLh09mgNlxXN0hwrK2MmypaPHcqCseI/uUkEZu1iydPRIDpQVx9GdKihj
         B8uVjh7HgbLiPLpbBWWs7fuP/wETXchPTchMFwAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAN0AAABtCAIAAACqbPM4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAdpJREFUeF7t0jFuHTEMQEHfyKVb3/84vkDygQApWKSRtH5WBph6lxTf2/vHJ9To
+        kiJdUqRLinRJkS4p0iVFuqRIlxTpkiJdUqRLinRJkS4p0iVFuqRIlxTpkiJdUqRLinRJkS4p0iVFuqRI
+        lxTpkiJdUqRLinRJkS4p0iVFuqRIlxTpkiJdUqRLinRJkS4p0iVFuqRIlxTpkiJdUqRLinRJkS4p0iVF
+        uqRIlxSlu/z19cZp480jvnms8UakjGM96el/j835WcY1z3niT2M3LjBOvN3ZH4xluMw490YHPz124Fbj
+        7luc6nKMzt3G9dcd6XIMzfVGAOt0yQYjgHW6ZIMRwDpdssEIYJ0u2WAEsE6XbDACWKdLNhgBrNMlG4wA
+        1umSDUYA63TJBiOAdbpkgxHAuiNdvoy5udu4/rpTXb6M0bnVuPsWB7t8GQtwmXHujc52+cdYhguME2/3
+        RJd/jd34ccZBz3m0y2HsTNA42WO+s8t/Gw/EIePZI7pd8j/TJUW6pEiXFOmSIl1SpEuKdEmRLinSJUW6
+        pEiXFOmSIl1SpEuKdEmRLinSJUW6pEiXFOmSIl1SpEuKdEmRLinSJUW6pEiXFOmSIl1SpEuKdEmRLinS
+        JUW6pOfj8zcwUeJF0s91YQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="button5.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 15</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Version </value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 15</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>label7</value>
   </data>
 </root>

@@ -23,16 +23,14 @@ namespace calculator
 
         #region Windows Form Designer generated code
 
+        string versionshow;
+
         /// <summary>
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-
-            string versionFilePath = Path.Combine(Application.StartupPath, "version.txt");
-            string versionshow = File.ReadAllText(versionFilePath);
-
             Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button2 = new Button();
@@ -70,6 +68,7 @@ namespace calculator
             pictureBox6 = new PictureBox();
             button5 = new Button();
             label6 = new Label();
+            label7 = new Label();
             button1 = new Button();
             panel1.SuspendLayout();
             Order_2.SuspendLayout();
@@ -90,9 +89,9 @@ namespace calculator
             // 
             // button1
             // 
-            resources.ApplyResources(button1, "button1");
             button1.BackColor = Color.FromArgb(67, 76, 94);
             button1.Cursor = Cursors.Hand;
+            resources.ApplyResources(button1, "button1");
             button1.ForeColor = Color.Yellow;
             button1.Name = "button1";
             button1.UseVisualStyleBackColor = false;
@@ -100,9 +99,9 @@ namespace calculator
             // 
             // button2
             // 
-            resources.ApplyResources(button2, "button2");
             button2.BackColor = Color.FromArgb(67, 76, 94);
             button2.Cursor = Cursors.Hand;
+            resources.ApplyResources(button2, "button2");
             button2.ForeColor = Color.Yellow;
             button2.Name = "button2";
             button2.UseVisualStyleBackColor = false;
@@ -110,18 +109,18 @@ namespace calculator
             // 
             // comboBox1
             // 
-            resources.ApplyResources(comboBox1, "comboBox1");
             comboBox1.BackColor = Color.FromArgb(67, 76, 94);
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.ForeColor = Color.Yellow;
             comboBox1.Items.AddRange(new object[] { resources.GetString("comboBox1.Items"), resources.GetString("comboBox1.Items1") });
+            resources.ApplyResources(comboBox1, "comboBox1");
             comboBox1.Name = "comboBox1";
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label1
             // 
-            resources.ApplyResources(label1, "label1");
             label1.BackColor = Color.FromArgb(67, 76, 94);
+            resources.ApplyResources(label1, "label1");
             label1.ForeColor = Color.Yellow;
             label1.Name = "label1";
             // 
@@ -137,7 +136,6 @@ namespace calculator
             // 
             // Order_2
             // 
-            resources.ApplyResources(Order_2, "Order_2");
             Order_2.BackColor = Color.FromArgb(47, 55, 64);
             Order_2.Controls.Add(textBox9);
             Order_2.Controls.Add(textBox8);
@@ -150,6 +148,7 @@ namespace calculator
             Order_2.Controls.Add(textBox3);
             Order_2.Controls.Add(textBox2);
             Order_2.Controls.Add(textBox1);
+            resources.ApplyResources(Order_2, "Order_2");
             Order_2.Name = "Order_2";
             // 
             // textBox9
@@ -179,15 +178,15 @@ namespace calculator
             // 
             // pictureBox2
             // 
-            resources.ApplyResources(pictureBox2, "pictureBox2");
             pictureBox2.BackColor = Color.White;
+            resources.ApplyResources(pictureBox2, "pictureBox2");
             pictureBox2.Name = "pictureBox2";
             pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(pictureBox1, "pictureBox1");
             pictureBox1.BackColor = Color.White;
+            resources.ApplyResources(pictureBox1, "pictureBox1");
             pictureBox1.Name = "pictureBox1";
             pictureBox1.TabStop = false;
             // 
@@ -213,10 +212,10 @@ namespace calculator
             // 
             // panel3
             // 
-            resources.ApplyResources(panel3, "panel3");
             panel3.BackColor = Color.FromArgb(47, 55, 64);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label3);
+            resources.ApplyResources(panel3, "panel3");
             panel3.Name = "panel3";
             // 
             // label4
@@ -238,34 +237,34 @@ namespace calculator
             // 
             // panel4
             // 
-            resources.ApplyResources(panel4, "panel4");
             panel4.BackColor = Color.FromArgb(47, 55, 64);
             panel4.Controls.Add(pictureBox7);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(button4);
             panel4.Controls.Add(button3);
+            resources.ApplyResources(panel4, "panel4");
             panel4.Name = "panel4";
             // 
             // pictureBox7
             // 
-            resources.ApplyResources(pictureBox7, "pictureBox7");
             pictureBox7.Cursor = Cursors.Hand;
+            resources.ApplyResources(pictureBox7, "pictureBox7");
             pictureBox7.Name = "pictureBox7";
             pictureBox7.TabStop = false;
             pictureBox7.Click += pictureBox7_Click;
             // 
             // label5
             // 
-            resources.ApplyResources(label5, "label5");
             label5.BackColor = Color.FromArgb(67, 76, 94);
+            resources.ApplyResources(label5, "label5");
             label5.ForeColor = Color.Yellow;
             label5.Name = "label5";
             // 
             // button4
             // 
-            resources.ApplyResources(button4, "button4");
             button4.BackColor = Color.FromArgb(67, 76, 94);
             button4.Cursor = Cursors.Hand;
+            resources.ApplyResources(button4, "button4");
             button4.ForeColor = Color.Yellow;
             button4.Name = "button4";
             button4.UseVisualStyleBackColor = false;
@@ -273,9 +272,9 @@ namespace calculator
             // 
             // button3
             // 
-            resources.ApplyResources(button3, "button3");
             button3.BackColor = Color.FromArgb(67, 76, 94);
             button3.Cursor = Cursors.Hand;
+            resources.ApplyResources(button3, "button3");
             button3.ForeColor = Color.Yellow;
             button3.Name = "button3";
             button3.UseVisualStyleBackColor = false;
@@ -283,10 +282,10 @@ namespace calculator
             // 
             // panel5
             // 
-            resources.ApplyResources(panel5, "panel5");
             panel5.Controls.Add(panel1);
             panel5.Controls.Add(Order_2);
             panel5.Controls.Add(panel3);
+            resources.ApplyResources(panel5, "panel5");
             panel5.Name = "panel5";
             // 
             // fileSystemWatcher1
@@ -316,25 +315,25 @@ namespace calculator
             // 
             // pictureBox5
             // 
-            resources.ApplyResources(pictureBox5, "pictureBox5");
             pictureBox5.Cursor = Cursors.Hand;
+            resources.ApplyResources(pictureBox5, "pictureBox5");
             pictureBox5.Name = "pictureBox5";
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox6
             // 
-            resources.ApplyResources(pictureBox6, "pictureBox6");
             pictureBox6.Cursor = Cursors.Hand;
+            resources.ApplyResources(pictureBox6, "pictureBox6");
             pictureBox6.Name = "pictureBox6";
             pictureBox6.TabStop = false;
             pictureBox6.Click += pictureBox6_Click_1;
             // 
             // button5
             // 
-            resources.ApplyResources(button5, "button5");
             button5.BackColor = Color.FromArgb(67, 76, 94);
             button5.Cursor = Cursors.Hand;
+            resources.ApplyResources(button5, "button5");
             button5.ForeColor = Color.Yellow;
             button5.Name = "button5";
             button5.UseVisualStyleBackColor = false;
@@ -345,13 +344,19 @@ namespace calculator
             resources.ApplyResources(label6, "label6");
             label6.ForeColor = Color.Yellow;
             label6.Name = "label6";
-            label6.Text = "Version " + versionshow;
+            // 
+            // label7
+            // 
+            resources.ApplyResources(label7, "label7");
+            label7.ForeColor = Color.Yellow;
+            label7.Name = "label7";
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 52, 64);
+            Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(button5);
             Controls.Add(pictureBox6);
@@ -420,5 +425,6 @@ namespace calculator
         private PictureBox pictureBox7;
         private Button button5;
         private Label label6;
+        private Label label7;
     }
 }
